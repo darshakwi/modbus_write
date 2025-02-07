@@ -1,0 +1,9 @@
+<!-- This launchfile initializes the ros cpp refernce package -->
+<launch>
+  <!-- Load parameters from YAML file -->
+  <rosparam file="$(find modbus_write)/config/modbus_write_params.yaml" command="load" />
+
+  <node  pkg="modbus_write" type="modbus_write_node" name="modbus_write" output="screen"> 
+  </node>
+
+</launch>

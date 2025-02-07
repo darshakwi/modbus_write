@@ -1,0 +1,49 @@
+### ModbusRead Parameters
+
+modbus:
+  port: /dev/ttyACM0
+  baudrate: 115200
+  parity: 'N'
+  stopbits: 1
+  bytesize: 8
+  timeout: 5
+  unit_ids: [1]
+  parameter_reading_frequency: 50
+
+parameters:
+  pulse_per_rotation: 1000
+  position_target_low_regr: 460
+  position_target_high_regr: 461
+  motor_start_stop_regr: 1210
+  motion_rotation_dir_regr: 101
+  position_acceleration_time_regr: 463
+  position_deceleration_time_regr: 464
+  position_speed_rpm_regr: 462
+  motor_speed: 1301
+
+read_parameters:
+  position_feedback_counter: 1311
+
+encoder_value:
+  x:
+    gear_box_driver: 1
+    gear_box_driven: 1
+    pulley_pitch: 8
+    pulley_no_of_teeth: 18
+    encoder_resolution: 131072
+  y:
+    gear_box_driver: 1
+    gear_box_driven: 1
+    pulley_pitch: 8
+    pulley_no_of_teeth: 18
+    encoder_resolution: 131072
+  z:
+    gear_box_driver: 1
+    gear_box_driven: 1
+    pulley_pitch: 8 #9.0325
+    pulley_no_of_teeth: 18 #8
+    encoder_resolution: 131072
+
+uart:
+  port: /dev/ttyACM1
+  baudrate: 115200
